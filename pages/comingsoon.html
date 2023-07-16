@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coming soon</title>
+    <link rel="stylesheet" href="../css/comingsoon.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+
+  </head>
+  <body>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader--hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+    <div class="container" >
+      <div class="comingsoon">
+        <div class="content" data-aos="zoom-in">
+          <h1>Coming Soon</h1>
+          <hr />
+          <div class="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days"></span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours"></span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes"></span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds"></span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <a href="../pages/Menu.html" target="_blank"> <button>View Menu</button></a>
+          <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function () {
+              // Get the current date and time
+              var now = new Date().getTime();
+
+              // Calculate the distance between now and the countdown date
+              var distance = countDownDate - now;
+
+              // Calculate days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+              );
+              var minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) / (1000 * 60)
+              );
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Update the HTML elements with the new values
+              document.getElementById("days").innerHTML = days;
+              document.getElementById("hours").innerHTML = hours;
+              document.getElementById("minutes").innerHTML = minutes;
+              document.getElementById("seconds").innerHTML = seconds;
+
+              // If the countdown is finished, display a message
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+          </script>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
+
+  </body>
+</html>

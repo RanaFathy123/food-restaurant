@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Rufina:wght@400;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+:root {
+    /* start color */
+    --white: #fff;
+    --black: #000;
+    --Cbf0e4: #ebf0e4;
+    --C233000: #233000;
+    --gradient_1: linear-gradient(177.59deg, rgba(35, 48, 0, 0.2) 2.02%, rgba(35, 48, 0, 0) 97.98%);
+    --gradient_1: linear-gradient(180deg, rgba(7, 7, 7, 0.68) 0%, rgba(35, 48, 0, 0) 100%);
+    --C50660: #506600;
+    --C4D4D4D: #4D4D4D;
+    --C9CAA00: #9CAA00;
+    --B0B0B0: #B0B0B0;
+    /* end color */
+    /* start fonts */
+    --lato: 'Lato';
+    --Rufina: 'Rufina';
+    /* end fonts */
+    /* start padding */
+    --main-padding: 150px 0;
+    /* end padding */
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:is(a){
+    color: white;
+}
+header {
+    z-index: 0;
+    padding: 40px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+header .left {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+header .left button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+header .left button i {
+    font-size: 20px;
+}
+header .left img{
+    width: 55%;
+}
+header .left img{
+    width: 55%;
+}
+/* ---------------- */
+
+header nav {
+    transition: 5s;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: none;
+    flex-direction: column;
+    color: white;
+    cursor: auto;
+
+
+    /* display: flex;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0; */
+}
+
+header nav img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+}
+header nav img + div{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: #233000;
+    opacity: 0.8;
+}
+header nav .head {
+    width: fit-content;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+header nav .body {
+    /* margin-top: 20px; */
+    padding: 0 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+header nav .body>ul>li {
+    font: 700 46px 'Rufina';
+    margin-top: 20px;
+    width: fit-content;
+}
+
+ header.active>a,
+header .active {
+    color: #233000;
+}
+
+header .active ul ol {
+    width: fit-content;
+    margin-top: 15px;
+    color: white;
+    font: 400 20px / 29px 'Rufina';
+}
+
+header .body .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+header .body .contact p{
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+header .body .contact h1 {
+    border-bottom: 2px white dashed;
+}
+
+header .body .contact .icon {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+header .left button:focus nav {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+header .right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header .right button {
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+header .right button:hover {
+    color: black;
+    background-color: white;
+}
+
+@media (width < 935px) {
+    header nav .body {
+        padding: 0 50px;
+    }
+}
+@media(width < 860px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    header :is(.left, .right) {
+        gap: 15px;
+    }
+}
+
+@media(width < 632px) {
+    header   nav .body {
+        text-align: center;
+        justify-content: center;
+    }
+
+    header   nav .body .contact {
+        display: none;
+    }
+}
+
+@media(width < 510px) {
+    header .right {
+        display: none;
+    }
+
+    header .left {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+.main{
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    row-gap: 2%;
+}
+.s{
+    background-image: url(../img/Image9.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.sec-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec-1 button{
+    color: white;
+    border: 1px solid;
+    padding: 10px 40px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 1px;
+    background: none;
+}
+.sec-1 h1{
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 15%;
+    margin-top: 4%;
+}
+@media(width < 660px){
+    .sec-1 h1{
+        font-size: 40px;
+    }
+}
+@media(width < 300px){
+    .sec-1 h1{
+        margin-top: 20px;   
+        font-size: 30px;
+    }
+}
+/* start sec-1 */
+.sec-2{
+    /* margin: 3% 9%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec-2>p{
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 48px;
+    color: #4D4D4D;
+    margin: 5% 14%;
+}
+.sec-2 div>p{
+    text-align: center;
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 35px;
+    color: #4D4D4D;
+    /* margin: 5% 14%; */
+    padding: 40px 100px;
+    /* background-color: red; */
+}
+.sec-2 .img{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sec-2 img{
+    width: 40%;
+}
+@media(width < 670px){
+    .sec-2>p{
+        margin: 0;
+        font-size: 15px;
+        line-height: 30px;
+        width: calc(100% - 60px);
+        padding: 0 30px;
+    }
+
+
+    .sec-2 div>p{
+        font-size: 12px;
+        line-height: 22px;
+
+        width: calc(100% - 40px);
+        padding: 20px;
+        text-align: center;
+    }
+}
+/* end sec-2 */
+
+/* start sec-3 */
+.sec-3 {
+    background-image: url(../img/Image\ \(6\).png);
+    display: flex;
+    align-items: center;
+    PADDING: 1% 13%;
+    height: 505px;
+}
+
+.sec-3 p{
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 140%;
+    color: #FFFFFF;
+    z-index: 0;
+    /* position: relative; */
+}
+
+.sec-3 img{
+    position: absolute;
+    width: 100px;
+    left: 70%;
+    /* transform: translate(-100px); */
+    /* z-index: 1; */
+    /* width: 100px; */
+}
+
+
+@media(width < 600px){
+    .sec-3{
+        padding: 1% 5%;
+    }
+    .sec-3 p{
+        text-align: center;
+        font-size: 22px;
+        line-height: 40px;
+    }
+}
+@media(width < 340px){
+    .sec-3 img{
+        display: none;
+    } 
+    .sec-3 p{
+        text-align: center;
+    }
+}
+
+
+/* end sec-3 */
+
+/* start sec-4 */
+.sec-4{
+    margin: 6% 15%;
+}
+.sec-4 p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #4D4D4D;
+}
+@media(width < 800px){
+    .sec-4{
+        margin: 6% 5%;
+    }
+    .sec-4 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+
+/* end sec-4 */
+
+/* start sec-5 */
+.sec-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-end; */
+    gap: 50px;
+    padding: 5%;
+}
+.sec-5 .top{
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+}
+.sec-5 .button{
+    gap: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.sec-5 button{
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 1px;
+}
+.sec-5 h4{
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+.sec-5 .down{
+    display: flex;
+    align-items: center;
+}
+.sec-5 img{
+    width: 120px;
+}
+.sec-5 .down .avatar{
+    display: flex;
+}
+@media(width < 416px){
+    .sec-5 .down h1{
+        font-size: 20px;
+    }
+    .sec-5 .down p{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .sec-5 .top{
+        flex-direction: column;
+    }
+}
+/* end sec-5 */
+
+/* start sec-6 */
+.sec-6{
+    padding: var(--main-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.sec-6 h1{
+    margin: 3%;
+}
+.sec-6 .down{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+}
+.sec-6 .box {
+    /* width: 500px; */
+    max-width: 400px;
+    /* background-color: #233000; */
+}
+.sec-6 .box>img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sec-6 .box .info{
+    margin-left: 20px;
+}
+.sec-6 .box .info .avatar{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: fit-content;
+    margin-bottom: 45px;
+}
+.sec-6 .box .info .avatar img{
+    width: 50px;
+}
+.sec-6 .box .info .avatar h2{
+    font: 400 14px / 21px 'Lato';
+    letter-spacing: 0.02em;
+    color: var(--C50660);
+}
+.sec-6 .box .info h1{
+    font: 700 35px / 50px 'Rufina';
+    color: var(--black);
+    border-bottom: 3px dashed black;
+    margin-bottom: 35px;
+    width: 97%;
+}
+.sec-6 .box .info h1 + p{
+    font: 700 16px / 30px 'Lato';
+    color: var(--C4D4D4D);
+    margin-bottom: 45px;
+}
+.sec-6 .p{
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    gap: 15px;
+    font: 400 20px / 33px 'Lato';
+    letter-spacing: 0.02em;
+    color: var(--black);
+}
+@media (width < 1340px){
+    .main .container{
+        width: calc(100% - 40px);
+        padding: 0 20px;
+        /* background-color: #233000; */
+    }
+    .main .container .body{
+        /* background-color: red; */
+        justify-content: center;
+    }
+    .sec-6 .box{
+        width: 80%;
+    }
+}
+@media (width < 400px){
+    .sec-6 .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sec-6 .box .info .avatar{
+        height: 80px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .sec-6 .box .info h1{
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        translate: -10px;
+    }
+    .sec-6 .box .info h1 +p{
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+/* end sec-6 */
+
+/* start footer */
+footer {
+    margin-top: 30px;
+    background: var(--C233000);
+    width: 100%;
+    padding: 65px 0;
+  
+  }
+  
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 100px;
+    border-bottom: 2px dashed white;
+    padding-bottom: 70px;
+  }
+  
+  
+  footer  .logo {
+    /* margin: 15%; */
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 84px;
+    color: var(--Cbf0e4);
+    width: 188px;
+    height: 168px;
+  }
+  
+  footer .contact {
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+  
+  footer ul {
+    list-style: none;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    width: 224px;
+    height: 50px;
+  }
+  footer input::placeholder {
+    padding-left: 20px;
+  }
+  footer input[type=email] {
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    height: 50px;
+    width: 250px;
+    background: transparent;
+  }
+  footer .bt1 {
+    height: 50px;
+    background: #5E6600;
+    margin: 20px;
+    width: 100px;
+    font-family: 'Rufina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+  footer .join {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+  footer .rights{
+    width: 90%;
+    margin:  auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+  
+  }
+  footer .rights h1{
+    font: 400 24px / 33px 'Lato';
+    letter-spacing: 0.02em;
+    color: white;
+  }
+  footer  .icon {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  
+  @media(width < 753px){
+    footer  .rights{
+      width: 98%;
+      justify-content: center;
+    }
+  }
+  
+/* end footer */

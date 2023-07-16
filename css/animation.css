@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Rufina:wght@400;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+ body{
+    overflow-x: hidden;
+}
+.menu,.chef,.features,.form,.category,.test{
+    overflow-x: hidden;
+}
+/* start anmation nav */
+nav a{
+    transition: 0.3s;
+}
+nav a:hover{
+    color: #111;
+}
+nav i{
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #111;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav i:hover{
+    background-color: white;
+    font-size: 25px;
+}
+nav .fa-twitter:hover{
+    scale: 1.1;
+    color: #1DA1F2;
+}
+nav .fa-facebook-f:hover{
+    scale: 1.1;
+    color: #4267B2;
+}
+nav .fa-instagram:hover{
+    scale: 1.1;
+    color: #F77737;
+}
+nav .fa-youtube:hover{
+    scale: 1.1;
+    color: #FF0000;
+}
+/* end anmation nav */
+/* start animation boxs */
+.box{
+    transition: 0.3s !important;
+    padding-bottom: 20px;
+}
+.box:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    scale: 1.05;
+}
+.animationimg{
+    animation: animationimg 1s linear;
+    animation-delay: 1.5s;
+}
+.animationtext{
+    animation: animationtext 1s linear;
+    animation-delay: 1.5s;
+}
+@keyframes animationtext{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes animationimg{
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(-100px);
+    }
+}
+/* end animation boxs */
+
+/* start animation loading */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    transition: opacity 1.5s, visibility 1.5s;
+    z-index: 1000000;
+  }
+  
+  .loader--hidden {
+    opacity:1;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px dotted #000;
+    border-top-color: #608105;
+    border-left-color: #608105;
+    /* border-bottom: blue; */
+    /* border-right-color: blue; */
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+        
+      transform: rotate(1turn);
+    }
+  }
+/* end animation loading */
+
+/* start animation scroll view */
+/* .scrollview{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+   height: 300px;
+   width: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(to right, #1cd8d2, #93edc7);
+   color: white;
+   margin: 100px 0;
+   border-radius: 7px;
+ } */
+/* end animation scroll view */
